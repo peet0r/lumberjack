@@ -241,33 +241,19 @@ class Logger {
     }
   }
 
-  /// Log message at level [Level.FINEST].
+  /// Log message at level [Level.VERBOSE].
   ///
   /// See [log] for information on how non-String [message] arguments are
   /// handled.
-  void finest(Object? message, [Object? error, StackTrace? stackTrace]) =>
-      log(Level.FINEST, message, error, stackTrace);
+  void verbose(Object? message, [Object? error, StackTrace? stackTrace]) =>
+      log(Level.VERBOSE, message, error, stackTrace);
 
-  /// Log message at level [Level.FINER].
+  /// Log message at level [Level.DEBUG].
   ///
   /// See [log] for information on how non-String [message] arguments are
   /// handled.
-  void finer(Object? message, [Object? error, StackTrace? stackTrace]) =>
-      log(Level.FINER, message, error, stackTrace);
-
-  /// Log message at level [Level.FINE].
-  ///
-  /// See [log] for information on how non-String [message] arguments are
-  /// handled.
-  void fine(Object? message, [Object? error, StackTrace? stackTrace]) =>
-      log(Level.FINE, message, error, stackTrace);
-
-  /// Log message at level [Level.CONFIG].
-  ///
-  /// See [log] for information on how non-String [message] arguments are
-  /// handled.
-  void config(Object? message, [Object? error, StackTrace? stackTrace]) =>
-      log(Level.CONFIG, message, error, stackTrace);
+  void debug(Object? message, [Object? error, StackTrace? stackTrace]) =>
+      log(Level.DEBUG, message, error, stackTrace);
 
   /// Log message at level [Level.INFO].
   ///
@@ -276,26 +262,20 @@ class Logger {
   void info(Object? message, [Object? error, StackTrace? stackTrace]) =>
       log(Level.INFO, message, error, stackTrace);
 
-  /// Log message at level [Level.WARNING].
+  /// Log message at level [Level.WARN].
   ///
   /// See [log] for information on how non-String [message] arguments are
   /// handled.
-  void warning(Object? message, [Object? error, StackTrace? stackTrace]) =>
-      log(Level.WARNING, message, error, stackTrace);
+  void warn(Object? message, [Object? error, StackTrace? stackTrace]) =>
+      log(Level.WARN, message, error, stackTrace);
 
-  /// Log message at level [Level.SEVERE].
+  /// Log message at level [Level.ERROR].
   ///
   /// See [log] for information on how non-String [message] arguments are
   /// handled.
-  void severe(Object? message, [Object? error, StackTrace? stackTrace]) =>
-      log(Level.SEVERE, message, error, stackTrace);
+  void error(Object? message, [Object? error, StackTrace? stackTrace]) =>
+      log(Level.ERROR, message, error, stackTrace);
 
-  /// Log message at level [Level.SHOUT].
-  ///
-  /// See [log] for information on how non-String [message] arguments are
-  /// handled.
-  void shout(Object? message, [Object? error, StackTrace? stackTrace]) =>
-      log(Level.SHOUT, message, error, stackTrace);
 
   Stream<LogRecord> _getStream() {
     if (hierarchicalLoggingEnabled || parent == null) {
