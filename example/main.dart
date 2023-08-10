@@ -1,4 +1,4 @@
-import 'package:logging/logging.dart';
+import 'package:lumberjack/logging.dart';
 
 final log = Logger('ExampleLogger');
 

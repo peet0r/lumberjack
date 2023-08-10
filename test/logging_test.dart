@@ -4,7 +4,7 @@
 
 import 'dart:async';
 
-import 'package:logging/logging.dart';
+import 'package:lumberjack/logging.dart';
 import 'package:test/test.dart';
 
 void main() {
