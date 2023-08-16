@@ -298,4 +298,47 @@ class Logger {
   ///
   /// Loggers created with [Logger.detached] are not included.
   static Iterable<Logger> get attachedLoggers => _loggers.values;
+
+
+  // Finest
+  @Deprecated('you should use verbose,not this')
+  void finest(Object? message, [Object? err, StackTrace? stackTrace]) {
+    // Hey this is depricated
+    verbose(message, err, stackTrace);
+  }
+
+  // Finer
+  @Deprecated('you should use verbose instead')
+  void finer(Object? message, [Object? err, StackTrace? stackTrace]) {
+    verbose(message, err, stackTrace);
+  }
+
+  // Fine
+  @Deprecated('you should use debug instead')
+  void fine(Object? message, [Object? err, StackTrace? stackTrace]) {
+    debug(message, err, stackTrace);
+  }
+
+  // Config
+  @Deprecated('you should use debug instead')
+  void config(Object? message, [Object? err, StackTrace? stackTrace]) {
+    debug(message, err, stackTrace);
+  }
+
+  // Warning
+  @Deprecated('you should use warn instead')
+  void warning(Object? message, [Object? err, StackTrace? stackTrace]) =>
+      warn(message, err, stackTrace);
+
+  // Severe
+  @Deprecated('you should use error instead')
+  void severe(Object? message, [Object? err, StackTrace? stackTrace]) {
+    error(message, err, stackTrace);
+  }
+
+  // Shout
+  @Deprecated('you should use error instead')
+  void shout(Object? message, [Object? err, StackTrace? stackTrace]) {
+    error(message, err, stackTrace);
+  }
 }
